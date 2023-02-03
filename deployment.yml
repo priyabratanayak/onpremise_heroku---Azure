@@ -1,0 +1,33 @@
+api-version: 2019-12-01
+location: eastus
+name: onpremise_heroku
+properties:
+  containers:
+  - name: streamlitapp
+    properties:
+      image: jinuapp.azurecr.io/onpremise_heroku:v1
+      ports:
+      - port: 80
+        protocol: TCP
+      - port: 443
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 2.0
+          memoryInGB: 1.5
+  imageRegistryCredentials:
+  - server: jinuapp.azurecr.io
+    username: jinuapp
+    password: eMeVFmfbMNPIXiiBA4pt53YhDCsPEanccZxHMHc8iz+ACRDuBM7M
+  restartPolicy: Never
+  ipAddress:
+    ports:
+    - port: 443
+      protocol: TCP
+    - port: 80
+      protocol: TCP
+    type: Public
+    dnsNameLabel: oddlogic
+  osType: Linux
+tags: null
+type: Microsoft.ContainerInstance/containerGroups

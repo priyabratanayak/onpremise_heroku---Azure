@@ -1,0 +1,30 @@
+name: onpremise_heroku
+channels:
+ - conda-forge
+ - defaults
+dependencies:
+ - python=3.9.13
+ - pip
+ - pip:
+   - azureml-sdk
+   - tensorflow
+   - tensorflow-addons   
+   - streamlit
+   - pandas
+   - numpy
+   - scikit-learn
+   - plotly
+   - pybase64
+   - pymongo
+   - pytz
+   - bcrypt
+   - pymongo[srv]
+   - pydot
+   - graphviz
+   - connect
+   - statsmodels
+   - bs4
+   - nltk
+   - matplotlib
+   - xlrd
+   - openpyxl
